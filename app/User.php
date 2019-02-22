@@ -27,4 +27,22 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    protected $gaured = ['id'];
+
+    protected $date = [
+        'email_verified_at',  
+        'create_at',
+        'update_at',
+    ];
+
+    public function comments()
+    {
+        return $this->hasMany('App\Comment', 'user_id');
+    }
+
+    public function orders()
+    {
+        return $this->hasMany('App\Order', 'user_id');
+    }
 }
