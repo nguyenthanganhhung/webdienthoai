@@ -20,7 +20,6 @@ class Categories extends Migration
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *

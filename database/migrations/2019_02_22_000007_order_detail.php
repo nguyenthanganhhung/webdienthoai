@@ -22,7 +22,7 @@ class OrderDetail extends Migration
             $table->timestamps();
         });
 
-        
+       
     }
 
     /**

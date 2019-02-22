@@ -20,7 +20,6 @@ class Slides extends Migration
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *

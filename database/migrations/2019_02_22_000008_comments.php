@@ -23,7 +23,7 @@ class Comments extends Migration
             $table->timestamps();
         });
 
-        
+      
     }
 
     /**
