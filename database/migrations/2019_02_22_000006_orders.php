@@ -22,8 +22,6 @@ class Orders extends Migration
             $table->string('address');
             $table->string('payment');
             $table->integer('status');
-            $table->date('time_in');
-            $table->date('time_out');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
             $table->integer('product_id')->unsigned();

@@ -18,9 +18,6 @@ class Products extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('title');
-            $table->integer('quantity')->unsigned();
-            $table->string('description');
-            $table->integer('price')->unsigned();
             $table->string('size');
             $table->string('memory');
             $table->string('weights');
@@ -35,6 +32,9 @@ class Products extends Migration
             $table->integer('promotion_price')->unsigned();
             $table->string('image');
             $table->string('status');
+            $table->integer('quantity')->unsigned();
+            $table->string('description');
+            $table->integer('price')->unsigned();
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
