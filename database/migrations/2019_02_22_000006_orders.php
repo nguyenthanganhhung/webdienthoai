@@ -16,16 +16,14 @@ class Orders extends Migration
         Schema::create('orders', function (Blueprint $table)
         {
             $table->increments('id');
-            $table->string('fullname');
-            $table->string('email');
-            $table->string('phone');
-            $table->string('address');
-            $table->string('payment');
-            $table->integer('status');
+            $table->string('fullname')->nullable();
+            $table->string('email')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('address')->nullable();
+            $table->string('payment')->nullable();
+            $table->integer('status')->nullable();
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->integer('product_id')->unsigned();
-            $table->foreign('product_id')->references('id')->on('products');
             $table->timestamps();
         });
        

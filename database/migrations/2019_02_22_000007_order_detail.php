@@ -15,13 +15,13 @@ class OrderDetail extends Migration
     {
          Schema::create('order_details', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('product_name');
-            $table->integer('quantity_price');
-            $table->integer('price');
+            $table->string('product_name')->nullable();
+            $table->integer('quantity_price')->nullable();
+            $table->integer('price')->nullable();
             $table->integer('order_id')->unsigned();
             $table->foreign('order_id')->references('id')->on('orders');
-            $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('product_id')->unsigned();
+            $table->foreign('product_id')->references('id')->on('products');
             $table->timestamps();
         });
 
