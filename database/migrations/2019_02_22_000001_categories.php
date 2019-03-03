@@ -16,8 +16,8 @@ class Categories extends Migration
          Schema::create('categories', function (Blueprint $table)
         {
             $table->increments('id');
-            $table->string('name');
-            $table->integer('level');
+            $table->string('name')->nullable();
+            $table->integer('level')->unsigned();
             $table->timestamps();
         });
     }

@@ -1,0 +1,440 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Tin tức</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+</head>
+
+<body>
+<form id="form1" action="/" method="post">
+  <!--start bg_Topmenu-->
+  <div class="bg_Topmenu">
+    <div id="Topmenu">
+      <ul>
+        <li class="First topMenu_Account"> <a href="#"><span>Tài khoản của tôi</span></a> </li>
+        <li class="topMenu_Order"> <a href="#"><span>Quản lý đơn hàng</span></a> </li>
+        <li class="topMenu_Wishlist"> <a href="#"><span>Danh sách ưa thích</span></a> </li>
+        <li class="CartLink topMenu_Cart"> <a href="#"><span>Giỏ hàng</span></a> </li>
+        <li class="topMenu_Login"> <a href="#"><span>Đăng nhập</span></a> </li>
+        <li class="topMenu_Register"> <a href="#"><span>Đăng ký</span></a> </li>
+      </ul>
+    </div>
+  </div>
+  <!--end bg_Topmenu-->
+  <div class="Clear"></div>
+  <!--start bg_header-->
+  <div id="bg_header">
+    <div id="Header">
+      <div id="Logo">
+        <div id="LogoContainer">
+          <h1><a href="#">"bizmart"<span></span></a></h1>
+        </div>
+      </div>
+      <!--end Logo-->
+      <div id="Menu">
+        <div id="menu-container">
+          <ul id="nav">
+            <li class="current"><a href="home.html" title="Trang chủ"><span>trang chủ</span></a></li>
+            <li><a href="about.html" title="Giới thiệu"><span>Giới thiệu</span></a></li>
+            <li class="lever3"><a href="product.html" title="Sản phẩm"><span>Sản phẩm</span></a>
+              <ul class="lever10">
+                <li class="first10"><a href="#"><span>Máy tính xách tay</span></a></li>
+                <li ><a href="#"><span>Máy tính bảng</span></a></li>
+                <li class="last10"><a href="#"><span>Điện thoại di động</span></a>
+                  <ul class="lever11">
+                    <li class="lever11first"><a href="#"><span>APPLE</span></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="news.html" title="Tin tức"><span>tin tức</span></a></li>
+            <li><a href="map.html" title="Bản đồ"><span>bản đồ</span></a></li>
+            <li><a href="contact.html" title="Liên hệ"><span>Liên hệ</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <!--end Menu-->
+      <div class="Clear"></div>
+    </div>
+  </div>
+  <!--end bg_header--> 
+  <!--start bg_Container-->
+  <div id="Container">
+    <div id="Outer">
+      <div id="Wrapper">
+      	<div id="Breadcrumb" class="Breadcrumb">
+        	<ul>
+            	<li class="first">
+                	<a href="#">Trang chủ</a>
+                </li>
+                <li>
+                	<span>Tin tức</span>
+                </li>
+            </ul>
+        </div>
+        <div class="Clear"></div>
+        
+        <div id="SearchForm" >
+          <div id="SearchFormContainer" style="position:relative; z-index:10000;">
+            <input id="ct1Search_ct100_txtSearch" class="search-input" type="text" autocomplete="off" onKeyUp="SearchInstant()" name="ctl00$ctlSearch$ctl00$txtSearch"/>
+            <input id="ct1Search_ct100_btnSearch" class="search-button" type="submit" onClick="javascript:return OnSearchClick();" value="" name="ctl00$ctlSearch$ctl00$btnSearch"/>
+          </div>
+        </div>
+        <!--end SearchForm-->
+        <div id="cphpMain-Content">
+         	<div id="cphMain_ctl00_TopPane" class="top"></div>
+            
+            <!-- -------------------------------- -->
+            <div id="cphMain_ct100_LeftPane" class="left">
+              <div id="cate-menu" class="DefaultModule cate-menu">
+                <div class="defaultTitle cate-menu-title"> <span style="padding-left:10px;">Danh mục sản phẩm</span> </div>
+                <div class="defaultContent cate-menu-content">
+                  <ul>
+                    <li class="leve10 content-first"> <a href="#"><span style="font-weight:bold;">Điện thoại di động</span></a>
+                      <ul style="display:block">
+                        <li class="leve11 first"> <a href="#"><span>Iphone</span></a>
+                          <ul style="display:block;">
+                          </ul>
+                        </li>
+                        <li class="leve11"> <a href="#"><span>Samsung</span></a>
+                          <ul style="display:block;">
+                          </ul>
+                        </li>
+                        <li class="leve11"> <a href="#"><span>Nokia</span></a>
+                          <ul style="display:block;">
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <!--CONTENT2-->
+                    <li class="leve10 content-2"> <a href="#"><span style="font-weight:bold;">Máy tính bảng</span></a>
+                      <ul style="display:block">
+                        <li class="leve11 first"> <a href="#"><span>Ipad</span></a>
+                          <ul style="display:block;">
+                          </ul>
+                        </li>
+                        <li class="leve11"> <a href="#"><span>Lenovo</span></a>
+                          <ul style="display:block;">
+                          </ul>
+                        </li>
+                        <li class="leve11"> <a href="#"><span>Samsung</span></a>
+                          <ul style="display:block;">
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <!--content3-->
+                    <li class="leve10 content-first"> <a href="#"><span style="font-weight:bold;">Laptop</span></a>
+                      <ul style="display:block">
+                        <li class="leve11 first"> <a href="#"><span>Acer</span></a>
+                          <ul style="display:block;">
+                          </ul>
+                        </li>
+                        <li class="leve11"> <a href="#"><span>Lenovo</span></a>
+                          <ul style="display:block;">
+                          </ul>
+                        </li>
+                        <li class="leve11"> <a href="#"><span>Vaio</span></a>
+                          <ul style="display:block;">
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <!--content4-->
+                    <li class="leve10 content-first"> <a href="#"><span style="font-weight:bold;">Phụ kiện</span></a>
+                      <ul style="display:block">
+                        <li class="leve11 first"> <a href="#"><span>Phụ kiện máy tính</span></a>
+                          <ul style="display:block;">
+                          </ul>
+                        </li>
+                        <li class="leve11"> <a href="#"><span>Phụ kiện điện thoại</span></a>
+                          <ul style="display:block;">
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="defaultFooter cate-menu-footer">
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <!-- -------------------------------- -->
+            <div id="cphMain_ctl00_ContentPane" class="center center_right">
+            	<div class="NewsListContainer DefaultModule ListItems">
+                	<div class="newsCategory defaultTitle">
+                    	<h1>Tin tức</h1>
+                    </div>
+                    
+                    <!-- --------------------------- -->
+                    <div class="defaultContent newsList">
+                    	<table class="newsList_Item" cellpadding="0" cellspacing="0">
+                        	<tr>
+                            <td class="newsList_Image">
+                            <a href="#">
+                            <img src="image/2014889525499.120.90.jpg"/>
+                            </a>
+                            </td>
+                            <td class="newsList_Content">
+                            <div>
+                            <a class="newsList_Title" href="#"> Samsung Galaxy Alpha đã xuất hiện tại FCC </a>
+                            <span class="newsList_Date" style="display: none;"> (08/08/2014 9:52:00 SA)</span>
+                            </div>
+                            <div>
+                            <span class="newsList_Summary"> Chỉ mới vài ngày sau khi xuất hiện thông tin về mẫu Galaxy Alpha thì không lâu sau đó Samsung đã xác nhận thông tin này và cho biết đó chính là model có nhãn hiệu SM-G850F và đã được test tại FCC.</span>
+                            <span class="newsList_LinkDetail"></span>
+                            </div>
+                            </td>
+                            </tr>
+                        </table>
+                        <div class="newsList_Seperator" ></div>
+                        <!--<hr class="newsList_Seperator"/>-->
+                        <!-- 2 -->
+                        <table class="newsList_Item" cellpadding="0" cellspacing="0">
+                        	<tr>
+                            <td class="newsList_Image">
+                            <a href="#">
+                            <img src="image/2014889464150.120.90.jpg"/>
+                            </a>
+                            </td>
+                            <td class="newsList_Content">
+                            <div>
+                            <a class="newsList_Title" href="#"> Phát hiện HTC One M8 Windows Phone 8.1 tại châu Âu</a>
+                            <span class="newsList_Date" style="display: none;"> (08/08/2014 9:52:00 SA)</span>
+                            </div>
+                            <div>
+                            <span class="newsList_Summary"> Chiếc HTC One M8 phiên bản chạy Windows Phone 8.1 từng bị rò rỉ nhiều hình ảnh, cũng như thông tin về việc ra mắt vào ngày 19 tháng 8 tới đây. Tuy nhiên cho tới trước khi sự kiện đó diễn ra, HTC M8 WP 8.1 đã xuất hiện trên website của hãng viễn thông Hà Lan là Telfort.</span>
+                            <span class="newsList_LinkDetail"></span>
+                            </div>
+                            </td>
+                            </tr>
+                        </table>
+                        <div class="newsList_Seperator" ></div>
+                        <!--<hr class="newsList_Seperator"/>-->
+                        <!-- 3 -->
+                        <table class="newsList_Item" cellpadding="0" cellspacing="0">
+                        	<tr>
+                            <td class="newsList_Image">
+                            <a href="#">
+                            <img src="image/20148894849922.120.90.jpg"/>
+                            </a>
+                            </td>
+                            <td class="newsList_Content">
+                            <div>
+                            <a class="newsList_Title" href="#"> Facebook đưa ứng dụng Messager lên Android Wear </a>
+                            <span class="newsList_Date" style="display: none;"> (08/08/2014 9:52:00 SA)</span>
+                            </div>
+                            <div>
+                            <span class="newsList_Summary"> Ngay sau khi WhatsApp công bố sẽ đưa ứng dụng nhắn tin của mình lên chiếc đồng hồ thông minh Android Wear thì hàng loạt những ông lớn như Facebook, Kakao Talk, Skyper cũng đồng loạt nghiên cứu để phát triển ứng dụng của mình lên thiết bị này.</span>
+                            <span class="newsList_LinkDetail"></span>
+                            </div>
+                            </td>
+                            </tr>
+                        </table>
+                        <div class="newsList_Seperator" ></div>
+                        <!--<hr class="newsList_Seperator"/>-->
+                        <!-- 4 -->
+                        <table class="newsList_Item" cellpadding="0" cellspacing="0">
+                        	<tr>
+                            <td class="newsList_Image">
+                            <a href="#">
+                            <img src="image/20148893643287.120.90.jpg"/>
+                            </a>
+                            </td>
+                            <td class="newsList_Content">
+                            <div>
+                            <a class="newsList_Title" href="#"> Sony Xperia Tablet mới sắp ra mắt  </a>
+                            <span class="newsList_Date" style="display: none;"> (08/08/2014 9:52:00 SA)</span>
+                            </div>
+                            <div>
+                            <span class="newsList_Summary"> Sony Xperia Z2 Tablet hiện đang được bán tại các cửa hàng từ tháng 3 năm nay và hiện tại đang có nhiều thông tin cho biết Sony sắp sửa tung ra một phiên bản mới của dòng Xperia Tablet và có thể tên của nó sẽ là Z3.</span>
+                            <span class="newsList_LinkDetail"></span>
+                            </div>
+                            </td>
+                            </tr>
+                        </table>
+                        <div class="newsList_Seperator" ></div>
+                        <!--<hr class="newsList_Seperator"/>-->
+                        <!-- 5 -->
+                        <table class="newsList_Item" cellpadding="0" cellspacing="0">
+                        	<tr>
+                            <td class="newsList_Image">
+                            <a href="#">
+                            <img src="image/2014889441073.120.90.jpg"/>
+                            </a>
+                            </td>
+                            <td class="newsList_Content">
+                            <div>
+                            <a class="newsList_Title" href="#"> Chromebook sử dụng thuận tiện hơn iPad?  </a>
+                            <span class="newsList_Date" style="display: none;"> (08/08/2014 9:52:00 SA)</span>
+                            </div>
+                            <div>
+                            <span class="newsList_Summary"> Apple đã thành công trong việc đưa iPad trở thành một trong những thiết bị và là dụng cụ học tập phổ biến trong các trường học, đặc biệt là ở Mỹ và Châu Âu. </span>
+                            <span class="newsList_LinkDetail"></span>
+                            </div>
+                            </td>
+                            </tr>
+                        </table>
+                        <div class="newsList_Seperator" ></div>
+                        <!--<hr class="newsList_Seperator"/>-->
+                        <!-- 6 -->
+                        <table class="newsList_Item" cellpadding="0" cellspacing="0">
+                        	<tr>
+                            <td class="newsList_Image">
+                            <a href="#">
+                            <img src="image/201157114729225.120.90.jpg"/>
+                            </a>
+                            </td>
+                            <td class="newsList_Content">
+                            <div>
+                            <a class="newsList_Title" href="#"> HTC Desire S ra mắt với giá 11,7 triệu đồng  </a>
+                            <span class="newsList_Date" style="display: none;"> (08/08/2014 9:52:00 SA)</span>
+                            </div>
+                            <div>
+                            <span class="newsList_Summary"> Chiếc điện thoại thông minh mới này kế thừa thành công của mẫu Desire nổi tiếng, sở hữu giao diện HTC Sense trực quan và thiết kế nhôm nguyên khối đặc trưng của HTC.</span>
+                            <span class="newsList_LinkDetail"></span>
+                            </div>
+                            </td>
+                            </tr>
+                        </table>
+                        <div class="newsList_Seperator" ></div>
+                        <!--<hr class="newsList_Seperator"/>-->
+                        <!-- 7 -->
+                        <table class="newsList_Item" cellpadding="0" cellspacing="0">
+                        	<tr>
+                            <td class="newsList_Image">
+                            <a href="#">
+                            <img src="image/201157114158569.120.90.jpg"/>
+                            </a>
+                            </td>
+                            <td class="newsList_Content">
+                            <div>
+                            <a class="newsList_Title" href="#"> Trận đại thắng của Galaxy S II trên sân nhà  </a>
+                            <span class="newsList_Date" style="display: none;"> (08/08/2014 9:52:00 SA)</span>
+                            </div>
+                            <div>
+                            <span class="newsList_Summary"> 120.000 chiếc Samsung Galaxy S II bán hết veo trong 3 ngày đầu ra mắt ở Hàn Quốc. Chắc chắn là các vị lãnh đạo của Samsung phải cảm thấy rất hài lòng với kết quả này. Và kết quả bán hàng của Galaxy S II "tốt đều " ở cả 3 nhà mạng...</span>
+                            <span class="newsList_LinkDetail"></span>
+                            </div>
+                            </td>
+                            </tr>
+                        </table>
+                        <div class="newsList_Seperator" ></div>
+                        <!--<hr class="newsList_Seperator"/>-->
+                        <!-- 8 -->
+                        <table class="newsList_Item" cellpadding="0" cellspacing="0">
+                        	<tr>
+                            <td class="newsList_Image">
+                            <a href="#">
+                            <img src="image/201157114251694.120.90.jpg"/>
+                            </a>
+                            </td>
+                            <td class="newsList_Content">
+                            <div>
+                            <a class="newsList_Title" href="#"> Infuse 4G - điện thoại siêu mỏng với màn hình cỡ lớn  </a>
+                            <span class="newsList_Date" style="display: none;"> (08/08/2014 9:52:00 SA)</span>
+                            </div>
+                            <div>
+                            <span class="newsList_Summary"> Samsung Infuse 4G, một trong những smartphone cấu hình cao nhất và được đánh giá là "ngoạn mục" nhất năm 2011, sẽ được phân phối từ ngày 15/5 với giá 200 USD kèm hợp đồng thuê bao.</span>
+                            <span class="newsList_LinkDetail"></span>
+                            </div>
+                            </td>
+                            </tr>
+                        </table>
+                        <div class="newsList_Seperator" ></div>
+                        <!--<hr class="newsList_Seperator" />-->
+                        <div class="PageNavigation" align="center" style="padding-bottom:10px; padding-top:10px;">
+                        	<a href="#" id="PageFirst">Trang đầu</a>
+                            <a href="#" id="PrevPage"> << </a>
+                        	<a href="#" id="Page0" class="active" style="background-color:gray; color:white;">
+                            	<strong>1</strong>
+                            </a>
+                            <a href="#" id="Page1">2</a>
+                            <a href="#" id="NextPage"> >> </a>
+                            <a href="#" id="PageLast"> Trang cuối</a>
+                        </div>
+                    </div>
+                    
+                    <!-- --------------------------- -->
+                    <div class="clear defaultFooter newsList-footer"></div>
+                    <div class="clear"></div>
+                </div>
+                
+            </div> <!-- end class= center center_right-->
+            <div id="cphMain_ctl00_BottomPane" class="bottom"></div>
+        </div>
+      </div>
+      <!--end Wrapper-->
+      <div class="Clear"></div>
+      <!--end clear--> 
+    </div>
+    <!--end Outer--> 
+    
+  </div>
+  <!--end Container--> 
+  <!--start Footer-->
+  <div id="Footer">
+    <div id="FooterContainer">
+      <div style="width:100%; float:left;">
+        <div id="footer_wrapper">
+          <div id="thong_tin" class="bottom_box">
+            <ul>
+              <li> <a class="tieu_de" href="#">Điện thoại di động</a> </li>
+              <li> <a href="#">Apple (Iphone)</a> </li>
+              <li> <a href="#">Samsung</a> </li>
+              <li> <a href="#">Nokia</a> </li>
+              <li> <a href="#">Sony</a> </li>
+            </ul>
+          </div>
+          <div id="ho_tro" class="bottom_box">
+            <ul>
+              <li> <a class="tieu_de" href="#">Máy tính bảng</a> </li>
+              <li> <a href="#">Apple (Ipad)</a> </li>
+              <li> <a href="#">Samsung</a> </li>
+              <li> <a href="#">Asus</a> </li>
+              <li> <a href="#">Lenovo</a> </li>
+            </ul>
+          </div>
+          <div id="thong_tin" class="bottom_box">
+            <ul>
+              <li> <a class="tieu_de" href="#">Phụ kiện</a> </li>
+              <li> <a href="#">Thẻ nhớ</a> </li>
+              <li> <a href="#">Pin sạc</a> </li>
+              <li> <a href="#">Cable</a> </li>
+              <li> <a href="#">Headphone</a> </li>
+            </ul>
+          </div>
+          <div id="thong_tin" class="bottom_box fr">
+            <ul>
+              <li> <a class="tieu_de" href="#">Về chúng tôi</a> </li>
+              <li> <a href="#">Giới thiệu</a> </li>
+              <li> <a href="#">Đăng ký</a> </li>
+              <li> <a href="#">Đăng nhập</a> </li>
+              <li> <a href="#">Contact</a> </li>
+            </ul>
+          </div>
+          <div id="thong_tin" class="bottom_box bizmart_box">
+            <ul>
+              <li> <a class="tieu_de bizmart" href="#">C</a> <a href="#">ông ty Cổ phần Công nghệ DKT</a> </li>
+              <li class="locate"> <a href="#"> <img src="image/locate.gif"/> 442 Độ Cấn, Ba Đình, Hà Nội </a> </li>
+              <li class="ctinfo"> <a href="#"> <img src="image/bsphone.gif"/> +04 6674 2332 </a> <a href="#"> <img src="image/mail.gif"/> support$bizweb.vn </a> </li>
+              <li class="fthotline"> <a href="#"> <span class="bold"> HOTLINE: <span>0934 515 339 - 04 6674 5832</span> </span> </a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="wrap_all"></div>
+    </div>
+    <div id="Powerby"> Thiết kế bởi <a href="#" target="_blank" title="Giải pháp thiết kế web bán hàng số 1 Việt Nam"> <strong>Bizweb</strong> </a><br/>
+      &copy; Copyright 2008 - 2003 Bizweb.vn - Giải pháp thiết kế web bán hàng số 1 Việt Nam </div>
+    <div class="Clear"></div>
+  </div>
+  <!--end Footer-->
+</form>
+<!--end form-->
+</body>
+</html>
+>

@@ -15,8 +15,8 @@ class Slides extends Migration
     {
         Schema::create('slides', function (Blueprint $table){
             $table->increments('id');
-            $table->string('name');
-            $table->string('url');
+            $table->string('name')->nullable();
+            $table->string('url')->nullable();
             $table->timestamps();
         });
     }

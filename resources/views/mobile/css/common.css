@@ -1,0 +1,15 @@
+/* CSS Document */
+
+#SearchForm {
+	background: url(../image/search_bg.gif) no-repeat left center;
+	border: 1px solid #d7d7d7;
+	position: absolute;
+	width: 234px;
+	top:48px;
+	float:right;	
+}
+a{
+	color:#363636;
+	font-weight:normal;
+	text-decoration:none;}
+
