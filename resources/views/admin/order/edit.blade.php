@@ -47,19 +47,33 @@
                                 <input class="form-control" name="address" placeholder="Please Enter address" value="{{$order->users->address}}" />
                             </div>
 
+
+                            <div class="form-group">
+                                <label>user name</label>
+                                <input class="form-control" name="user_id" placeholder="Please Enter user name" value="{{$order->user_id}}" />
+                            </div>
+
                             <div class="form-group">
                                 <label>payment</label>
                                 <input class="form-control" name="payment" placeholder="Please Enter payment" value="{{$order->payment}}" />
                             </div>
 
                             <div class="form-group">
-                                <label>status</label>
-                                <input class="form-control" name="status" placeholder="Please Enter status" value="{{$order->status}}" />
-                            </div>
-
-                            <div class="form-group">
-                                <label>user name</label>
-                                <input class="form-control" name="user_id" placeholder="Please Enter user name" value="{{$order->user_id}}" />
+                                <p><label>status</label></p>
+                                <label class="radio-inline">
+                                    <input name="status" value="1"
+                                    @if($order->status == 1)
+                                        {{ 'checked' }}
+                                    @endif
+                                     type="radio">Có
+                                </label>
+                                <label class="radio-inline">
+                                    <input name="status" value="0"
+                                    @if($order->status == 0)
+                                        {{ 'checked' }}
+                                    @endif
+                                     type="radio">Không
+                                </label>
                             </div>
 
                             <button type="submit" class="btn btn-default">edit</button>

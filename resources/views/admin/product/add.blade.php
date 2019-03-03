@@ -25,7 +25,7 @@
                             <strong>{{session('thongbao')}}</strong>
                         </div>
                     @endif
-                        <form action="" method="POST">
+                        <form action="" method="POST" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <div class="form-group">
                                 <label>Name</label>
@@ -37,9 +37,11 @@
                                 <input class="form-control" name="title" placeholder="Please Enter title" />
                             </div>
 
-                            <div class="form-group">
-                                <label>description</label>
-                                <input class="form-control" name="desciption" placeholder="Please Enter description" />
+                           <div class="form-group">
+                                <p><label>Description</label></p>
+                                <textarea name="description" id="demo" class="form-control ckeditor" rows="3">
+                                    {{ old('article_desc') }}
+                                </textarea>
                             </div>
 
                             <div class="form-group">
@@ -99,12 +101,7 @@
 
                             <div class="form-group">
                                 <label>image</label>
-                                <input class="form-control" name="image" placeholder="Please Enter image" />
-                            </div>
-
-                            <div class="form-group">
-                                <label>status</label>
-                                <input class="form-control" name="status" placeholder="Please Enter status" />
+                                <input class="form-control" type ="file" name="image" placeholder="Please Enter image" />
                             </div>
 
                             <div class="form-group">
@@ -131,6 +128,15 @@
                                 </select>
                             </div>
 
+                            <div class="form-group">
+                                <p><label>status</label></p>
+                                <label class="radio-inline">
+                                    <input name="status" value="1" checked="" type="radio">Con
+                                </label>
+                                <label class="radio-inline">
+                                    <input name="status" value="0" type="radio">het
+                                </label>
+                            </div>
 
                             <button type="submit" class="btn btn-default">Add</button>
                             <button type="reset" class="btn btn-default">Reset</button>

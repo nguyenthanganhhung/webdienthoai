@@ -35,8 +35,18 @@
                                 <td>{{$tl->users->email}}</td>
                                 <td>{{$tl->users->phone}}</td>
                                 <td>{{$tl->users->address}}</td>
-                                <td>{{$tl->payment}}</td>
-                                <td>{{$tl->status}}</td>
+                                <td>@if($tl->payment == 0)
+                                        {{ 'Vietteenbank' }}
+                                    @elseif($tl->payment == 1)
+                                        {{ 'Agribank' }}
+                                    @else
+                                    {{'megabank'}}
+                                    @endif</td>
+                                <td>@if($tl->status == 0)
+                                        {{ 'Không' }}
+                                    @else
+                                        {{ 'Có' }}
+                                    @endif</td>
                                 <td>{{$tl->users->id}}</td>
                                <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="{{url('admin/order/orderdetails_list/'.$tl->id)}}">orderdetail</a></td>
                                 <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="{{url('admin/order/delete/'.$tl->id)}}"> Delete</a></td>

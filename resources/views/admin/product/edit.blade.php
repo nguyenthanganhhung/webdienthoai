@@ -25,11 +25,19 @@
                             <strong>{{session('thongbao')}}</strong>
                         </div>
                     @endif
-                        <form action="" method="POST">
+                        <form action="" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label>Name</label>
                                 <input class="form-control" name="name" placeholder="Please Enter Name" value="{{$product->name}}" />
+                            </div>
+
+                            <div class="form-group">
+                                <p><label>image</label></p>
+                                <p>
+                                    <img width="400px" src="upload/anh/{{$product->image}}">
+                                </p>
+                                <input type="file" class="form-control" name="image">
                             </div>
 
                            <div class="form-group">
@@ -38,8 +46,10 @@
                             </div>
 
                             <div class="form-group">
-                                <label>description</label>
-                                <input class="form-control" name="description" placeholder="Please Enter description" value="{{$product->description}}"/>
+                                <p><label>Description</label></p>
+                                <textarea name="description" id="demo" class="form-control ckeditor"  rows="5">
+                                    {{$product->description}}
+                                </textarea>
                             </div>
 
                             <div class="form-group">
@@ -98,16 +108,6 @@
                             </div>
 
                             <div class="form-group">
-                                <label>image</label>
-                                <input class="form-control" name="image" placeholder="Please Enter image" value="{{$product->image}}"/>
-                            </div>
-
-                            <div class="form-group">
-                                <label>status</label>
-                                <input class="form-control" name="status" placeholder="Please Enter status" value="{{$product->status}}"/>
-                            </div>
-
-                            <div class="form-group">
                                 <label>quantity</label>
                                 <input class="form-control" name="quantity" placeholder="Please Enter quantity" value="{{$product->quantity}}"/>
                             </div>
@@ -129,6 +129,24 @@
                                     <option value="{{$tl->id}}" >{{$tl->name}}</option>
                                     @endforeach
                                 </select>
+                            </div>
+
+                            <div class="form-group">
+                                <p><label>status</label></p>
+                                <label class="radio-inline">
+                                    <input name="status" value="1"
+                                    @if($product->status == 1)
+                                        {{ 'checked' }}
+                                    @endif
+                                     type="radio">Có
+                                </label>
+                                <label class="radio-inline">
+                                    <input name="status" value="0"
+                                    @if($product->status == 0)
+                                        {{ 'checked' }}
+                                    @endif
+                                     type="radio">Không
+                                </label>
                             </div>
                             
                             <button type="submit" class="btn btn-default">Edit</button>

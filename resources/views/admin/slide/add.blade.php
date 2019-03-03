@@ -25,7 +25,7 @@
                             <strong>{{session('thongbao')}}</strong>
                         </div>
                     @endif
-                        <form action="" method="POST">
+                        <form action="" method="POST" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <div class="form-group">
                                 <label>Name</label>
@@ -33,8 +33,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label>link</label>
-                                <input class="form-control" name="url" placeholder="Please Enter link" />
+                                <label>url</label>
+                                <input class="form-control" type ="file" name="url" placeholder="Please Enter image" />
                             </div>
                             
                             <button type="submit" class="btn btn-default">Add</button>

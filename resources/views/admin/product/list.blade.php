@@ -16,6 +16,7 @@
                             <tr align="center">
                                 <th>ID</th>
                                 <th>Name</th>
+                                <th>image</th>
                                 <th>title</th>
                                 <th>description</th>
                                 <th>size</th>
@@ -29,7 +30,7 @@
                                 <th>bluetooth</th>
                                 <th>camera_primary</th>
                                 <th>camera_secondary</th>
-                                <th>image</th>
+                                
                                 <th>quantity</th>
                                 <th>price</th>
                                 <th>promotion_price</th>
@@ -44,6 +45,7 @@
                             <tr class="odd gradeX" align="center">
                                 <td>{{$tl->id}}</td>
                                 <td>{{$tl->name}}</td>
+                                <td><img width="100px" src="upload/anh/{{ $tl->image }}"></td>
                                 <td>{{$tl->title}}</td>
                                 <td>{{$tl->description}}</td>
                                 <td>{{$tl->size}}</td>
@@ -57,11 +59,15 @@
                                 <td>{{$tl->bluetooth}}</td>
                                 <td>{{$tl->camera_primary}}</td>
                                 <td>{{$tl->camera_secondary}}</td>
-                                <td>{{$tl->image}}</td>
+                                
                                 <td>{{$tl->quantity}}</td>
                                 <td>{{$tl->price}}</td>
                                 <td>{{$tl->promotion_price}}</td>
-                                <td>{{$tl->status}}</td>
+                                <td>@if($tl->status == 0)
+                                        {{ 'Không' }}
+                                    @else
+                                        {{ 'Có' }}
+                                    @endif</td>
                                 <td>{{$tl->categories->name}}</td>
                                 <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="{{url('admin/product/delete/'.$tl->id)}}"> Delete</a></td>
                                 <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="{{url('admin/product/edit/'.$tl->id)}}">Edit</a></td>

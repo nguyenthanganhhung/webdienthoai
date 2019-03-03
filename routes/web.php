@@ -11,13 +11,15 @@
 |
 */
 
-Route::get('trangchu', function () {
-    return view('admin.layout.master.php');
-});
-
 Route::get('/', function () {
     return view('welcome');
 });
+
+	Route::get('admin/login', ['as' => 'login', 'uses' => 'LoginController@getlogin']);
+	Route::post('admin/login', ['as' => 'login', 'uses' => 'LoginController@postlogin']);
+	Route::get('admin/signup', ['as' => 'signup', 'uses' => 'LoginController@getsignup']);
+	Route::post('admin/signup', ['as' => 'signup', 'uses' => 'LoginController@postsignup']);
+
 
 
 Route::group(['prefix' => 'admin'],function(){
@@ -25,6 +27,7 @@ Route::group(['prefix' => 'admin'],function(){
 	Route::get('home',function(){
 		return view('admin.layout.master');
 	});
+
 
 	Route::group(['prefix' => 'category'],function(){
 		//admin/Category/edit
@@ -43,10 +46,6 @@ Route::group(['prefix' => 'admin'],function(){
 
 	});
 
-	Route::get('login', ['as' => 'login', 'uses' => 'LoginController@getlogin']);
-	Route::post('login', ['as' => 'login', 'uses' => 'LoginController@postlogin']);
-	Route::get('signup', ['as' => 'signup', 'uses' => 'LoginController@getsignup']);
-	Route::post('signup', ['as' => 'signup', 'uses' => 'LoginController@postsignup']);
 
 	Route::group(['prefix' => 'category'],function(){
 		//admin/Category/edit
@@ -159,6 +158,44 @@ Route::group(['prefix' => 'admin'],function(){
 		Route::post('add', 'CommentController@postadd');
 	});
 
+});
+Route::get('trangchu',function(){
+		return view('pages.home');
+});
+Route::group(['prefix' => 'pages'],function(){
+	Route::get('gioithieu',function(){
+		return view('pages.about');
+	});
 
+	Route::get('bando',function(){
+		return view('pages.map');
+	});
 
+	Route::get('dangnhap',function(){
+		return view('pages.login');
+	});
+
+	Route::get('dangky',function(){
+		return view('pages.register');
+	});
+
+	Route::get('sanpham',function(){
+		return view('pages.product');
+	});
+
+	Route::get('tintuc',function(){
+		return view('pages.new');
+	});
+
+	Route::get('lienhe',function(){
+		return view('pages.contact');
+	});
+
+	Route::get('taikhoan',function(){
+		return view('pages.personal');
+	});
+
+	Route::get('giohang',function(){
+		return view('pages.order');
+	});
 });

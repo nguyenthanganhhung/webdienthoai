@@ -33,8 +33,11 @@
                             </div>
 
                             <div class="form-group">
-                                <label>link</label>
-                                <input class="form-control" name="url" placeholder="Please Enter link" value="{{$slide->url}}" />
+                                <p><label>link</label></p>
+                                <p>
+                                    <img width="400px" src="upload/anh/{{$slide->image}}">
+                                </p>
+                                <input type="file" class="form-control" name="url">
                             </div>
                             
                             <button type="submit" class="btn btn-default">Add</button>
